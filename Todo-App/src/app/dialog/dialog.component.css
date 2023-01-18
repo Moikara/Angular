@@ -1,0 +1,15 @@
+.container {
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-around;
+}
+
+.button-cancel {
+    margin-right: 15px;
+}
+
+.button-confirm {
+    margin-left: 15px;
+}

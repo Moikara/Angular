@@ -1,0 +1,15 @@
+<mat-sidenav-container class="container">
+  <mat-sidenav mode="side" opened class="sidenav">
+    <mat-list role="list" class="todo-list">
+      <mat-list-item role="listitem" *ngFor="let todo of todoService.todos">
+        <a routerLink="/details/{{todo.id}}" [ngClass]=" todo.done ? 'done' : 'todo'">
+          {{todo.title}}
+        </a>
+      </mat-list-item>
+    </mat-list>
+    <button mat-raised-button color="primary" (click)="openDialog()">Add new</button>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
